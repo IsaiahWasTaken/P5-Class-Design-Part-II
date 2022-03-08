@@ -93,18 +93,17 @@ public:
 
 };
 
-void extfunction2(B& show) {
-    cout<< "File name:" << show.getName() << endl;
-    cout<< "image type:" << show.getType() << endl;
-    cout<< "date:" << show.getDate() << endl;
-    cout<< "Size:" << show.getimgSize() << endl;
-    cout<< "Photographer:" << show.getauthorName() << endl;
-    cout<< "Dimensions:" << show.getXY() << endl;
-    cout<< "aperture: f/" << show.getaptSize() << endl;
-    cout<< "exposure: 1/" << show.getxposure() << endl;
-    cout<< "ISO:" << show.getiso() << endl;
-    cout<< "flash:" << show.getflash() << endl;
-
-
+ostream& operator << (ostream& output, B& show) {
+    output << "File name: " << show.getName() << endl;
+    output << "image type:" << show.getType() << endl;
+    output << "date:" << show.getDate() << endl;
+    output << "Size:" << show.getimgSize() << endl;
+    output << "Photographer:" << show.getauthorName() << endl;
+    output << "Dimensions:" << show.getXY() << endl;
+    output << "aperture: f/" << show.getaptSize() << endl;
+    output<< "exposure: 1/" << show.getxposure() << endl;
+    output<< "ISO:" << show.getiso() << endl;
+    output<< "flash:" << show.getflash() << endl;
+    return output;
 
 }
