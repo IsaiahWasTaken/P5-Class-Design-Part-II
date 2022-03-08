@@ -7,9 +7,8 @@
 
 int main(){
 
-    const string input = ("https://www.ornage.com/lobster");
-    const A obj(input);
-    cout <<extfunction<<endl;
+    A obj("https://www.ornage.com/lobster");
+    cout << obj <<endl;
 
 
     B call("potato");
@@ -22,7 +21,9 @@ int main(){
     call.setXY(105,100);
     call.setaptSize(22);
     call.setimgSize(92385.3);
-    cout << extfunction << endl;
+    
+    
+    cout << call << endl;
 
 
 
@@ -37,4 +38,3 @@ int main(){
 
     return 0;
 }
-};
