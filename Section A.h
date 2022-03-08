@@ -54,10 +54,12 @@ public:
     }
 
 };
-void extfunction(A a){
-    cout <<"URL: "<< a.getInput() << endl;
-    cout <<"SCHEME: "<< a.getScheme() << endl;
-    cout <<"AUTHORITY: "<< a.getAuthority() << endl;
-    cout <<"PATH: "<< a.getPath() << endl;
+
+ostream& operator << (ostream& output, A& a) {
+    output <<"URL: " << a.getInput() << endl;
+    output <<"SCHEME: " << a.getScheme() << endl ;
+    output <<"AUTHORITY: "<< a.getAuthority() << endl;
+    output <<"PATH: "<< a.getPath() << endl;
+    return output;
 
 }
